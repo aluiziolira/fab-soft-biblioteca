@@ -1,7 +1,7 @@
 # 📚 Biblioteca Web - Sistema de Gerenciamento
 
-[![Java CI with Maven](https://github.com/SEU-USUARIO/SEU-REPOSITORIO/actions/workflows/ci-build-test.yml/badge.svg)](https://github.com/SEU-USUARIO/SEU-REPOSITORIO/actions/workflows/ci-build-test.yml)
-[![codecov](https://codecov.io/gh/SEU-USUARIO/SEU-REPOSITORIO/graph/badge.svg?token=SEU_TOKEN_CODECOV)](https://codecov.io/gh/SEU-USUARIO/SEU-REPOSITORIO)
+[![Java CI with Maven](https://github.com/aluiziolira/fab_soft_biblioteca/actions/workflows/ci-build-test.yml/badge.svg)](https://github.com/aluiziolira/fab_soft_biblioteca/actions/workflows/ci-build-test.yml)
+[![codecov](https://codecov.io/gh/aluiziolira/fab_soft_biblioteca/graph/badge.svg?token=SEU_TOKEN_CODECOV)](https://codecov.io/gh/aluiziolira/fab_soft_biblioteca)
 
 ![Java](https://img.shields.io/badge/Java-17-blue.svg) ![Maven](https://img.shields.io/badge/Maven-4.0.0-red.svg) ![Jakarta EE](https://img.shields.io/badge/Jakarta--EE-JSF-orange.svg)
 
@@ -48,7 +48,7 @@ Siga os passos abaixo para executar o projeto localmente.
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/<SEU-USUARIO>/fab_soft_biblioteca.git
+   git clone https://github.com/<aluiziolira>/fab_soft_biblioteca.git
    cd fab_soft_biblioteca
    ```
 
