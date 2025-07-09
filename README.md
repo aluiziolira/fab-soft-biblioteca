@@ -1,7 +1,7 @@
 # 📚 Biblioteca Web - Sistema de Gerenciamento
 
-[![Java CI with Maven](https://github.com/aluiziolira/fab_soft_biblioteca/actions/workflows/ci-build-test.yml/badge.svg)](https://github.com/aluiziolira/fab_soft_biblioteca/actions/workflows/ci-build-test.yml)
-[![codecov](https://codecov.io/gh/aluiziolira/fab_soft_biblioteca/graph/badge.svg?token=SEU_TOKEN_CODECOV)](https://codecov.io/gh/aluiziolira/fab_soft_biblioteca)
+[![Java CI with Maven](https://github.com/aluiziolira/fab-soft-biblioteca/actions/workflows/ci-build-test.yml/badge.svg)](https://github.com/aluiziolira/fab_soft_biblioteca/actions/workflows/ci-build-test.yml)
+[![codecov](https://codecov.io/gh/aluiziolira/fab-soft-biblioteca/graph/badge.svg)](https://codecov.io/gh/aluiziolira/fab_soft_biblioteca)
 
 ![Java](https://img.shields.io/badge/Java-17-blue.svg) ![Maven](https://img.shields.io/badge/Maven-4.0.0-red.svg) ![Jakarta EE](https://img.shields.io/badge/Jakarta--EE-JSF-orange.svg)
 
