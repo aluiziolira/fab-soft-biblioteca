@@ -13,7 +13,7 @@ Este projeto é um sistema de gerenciamento de biblioteca desenvolvido como uma 
 
 É um projeto de portfólio focado em demonstrar competências essenciais no ecossistema Java corporativo.
 
-**[INSERIR GIF DE DEMONSTRAÇÃO AQUI]**
+![CRUD demo](docs/fab_soft_demo.gif)
 
 ---
 
