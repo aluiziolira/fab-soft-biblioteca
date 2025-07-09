@@ -65,4 +65,11 @@ class LivroDAOTest {
     void testIsbnNaoExiste() {
         assertFalse(livroDAO.isbnJaExiste("999"));
     }
+
+    @Test
+    void testAdicionarLivroNulo() {
+        int initialSize = livroDAO.listarTodos().size();
+        livroDAO.adicionar(null);
+        assertEquals(initialSize, livroDAO.listarTodos().size());
+    }
 }

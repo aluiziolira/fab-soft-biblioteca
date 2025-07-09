@@ -35,7 +35,9 @@ public class LivroDAO {
      * @param livro O objeto Livro a ser adicionado.
      */
     public void adicionar(Livro livro) {
-        acervo.add(livro);
+        if (livro != null) {
+            acervo.add(livro);
+        }
     }
 
     /**
@@ -43,8 +45,11 @@ public class LivroDAO {
      * @param isbn O ISBN do livro a ser removido.
      */
     public void excluir(String isbn) {
+        if (isbn == null) {
+            return; // Não faz nada se o ISBN for nulo
+        }
         // Usa o método removeIf com uma expressão lambda para encontrar e remover o livro
-        acervo.removeIf(livro -> livro.getIsbn().equals(isbn));
+        acervo.removeIf(livro -> livro != null && isbn.equals(livro.getIsbn()));
     }
 
     /**
@@ -53,8 +58,11 @@ public class LivroDAO {
      * @return true se o ISBN já existir, false caso contrário.
      */
     public boolean isbnJaExiste(String isbn) {
+        if (isbn == null) {
+            return false; // ISBN nulo não pode existir
+        }
         for (Livro livro : acervo) {
-            if (livro.getIsbn().equals(isbn)) {
+            if (livro != null && livro.getIsbn() != null && livro.getIsbn().equals(isbn)) {
                 return true;
             }
         }

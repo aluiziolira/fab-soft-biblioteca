@@ -22,7 +22,16 @@ public class LivroBean {
     private Integer anoPublicacao;
     private String isbn;
 
-    private final LivroDAO livroDAO = new LivroDAO();
+    private LivroDAO livroDAO;
+
+    public LivroBean() {
+        this.livroDAO = new LivroDAO();
+    }
+
+    // Setter para injeção de dependência (usado em testes)
+    public void setLivroDAO(LivroDAO livroDAO) {
+        this.livroDAO = livroDAO;
+    }
 
     // Getters e Setters para os atributos do formulário
     public String getTitulo() { return titulo; }

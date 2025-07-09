@@ -2,14 +2,17 @@ package br.com.cesumar.biblioteca.controller;
 
 import br.com.cesumar.biblioteca.dao.LivroDAO;
 import br.com.cesumar.biblioteca.model.Livro;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.MockedStatic;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import javax.faces.application.FacesMessage;
+import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,17 +24,26 @@ class LivroBeanTest {
     @Mock
     private LivroDAO livroDAO;
 
-    @Mock
-    private FacesContext facesContext;
-
     @InjectMocks
     private LivroBean livroBean;
 
+    private MockedStatic<FacesContext> mockedFacesContext;
+    @Mock
+    private FacesContext facesContext;
+    @Mock
+    private ExternalContext externalContext;
+
     @BeforeEach
     void setUp() {
-        // Injeta o mock do FacesContext. Este é um padrão comum para testar JSF beans.
-        lenient().when(facesContext.isPostback()).thenReturn(false);
+        mockedFacesContext = mockStatic(FacesContext.class);
+        lenient().when(FacesContext.getCurrentInstance()).thenReturn(facesContext);
+        lenient().when(facesContext.getExternalContext()).thenReturn(externalContext);
         lenient().doNothing().when(facesContext).addMessage(anyString(), any(FacesMessage.class));
+    }
+
+    @AfterEach
+    void tearDown() {
+        mockedFacesContext.close();
     }
 
     @Test

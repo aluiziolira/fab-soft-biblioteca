@@ -40,7 +40,7 @@ class LivroServletTest {
     @BeforeEach
     void setUp() {
         // Comportamento padrão para o mock do RequestDispatcher
-        when(request.getRequestDispatcher(anyString())).thenReturn(dispatcher);
+        lenient().when(request.getRequestDispatcher(anyString())).thenReturn(dispatcher);
     }
 
     @Test

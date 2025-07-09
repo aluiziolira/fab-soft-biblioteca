@@ -40,4 +40,14 @@ class LivroTest {
         String expected = "Livro{titulo='Código Limpo', autor='Robert C. Martin', anoPublicacao=2009, isbn='978-85-7608-267-5'}";
         assertEquals(expected, livro.toString());
     }
+
+    @Test
+    void testDefaultConstructor() {
+        Livro livro = new Livro();
+        assertNotNull(livro);
+        assertNull(livro.getTitulo());
+        assertNull(livro.getAutor());
+        assertEquals(0, livro.getAnoPublicacao());
+        assertNull(livro.getIsbn());
+    }
 }

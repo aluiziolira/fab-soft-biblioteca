@@ -19,7 +19,16 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/livros")
 public class LivroServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private final LivroDAO livroDAO = new LivroDAO();
+    private LivroDAO livroDAO;
+
+    public LivroServlet() {
+        this.livroDAO = new LivroDAO();
+    }
+
+    // Setter para injeção de dependência (usado em testes)
+    public void setLivroDAO(LivroDAO livroDAO) {
+        this.livroDAO = livroDAO;
+    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
